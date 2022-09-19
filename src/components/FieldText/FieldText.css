@@ -5,9 +5,11 @@
     display: block;
     margin-bottom: 8px;
     font-size: 24px;
+    color: rgb(238, 238, 238);
 }
 
 .text input {
+    color: #5C079F;
     background-color: rgb(255, 255, 255);
     box-shadow: 10px 10px 30px rgb(0, 0, 0, 0);
     width: 100%;
