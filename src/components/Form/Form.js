@@ -1,3 +1,4 @@
+import Button from '../Button/Button';
 import Dropdown from '../Dropdown/Dropdown';
 import FieldText from '../FieldText';
 import './Form.css'
@@ -16,14 +17,22 @@ const Form = () => {
         'Corrida'
     ]
 
+    const save = (evento) => {
+        evento.preventDefault()
+        console.log("Form salvo")
+    }
+
     return(
         <section className='form'>
-            <form>
+            <form onSubmit={save}>
                <h2>Preencha os dados para criar o card do seu Personagem!</h2>
-                <FieldText label="Nome do personagem" placeholder="Digite o nome do personagem..."/>
-                <FieldText label="Game" placeholder="Digite o nome do game..."/>
-                <FieldText label="Imagem do personagem" placeholder="URL da imagem"/>
-                <Dropdown label="Gênero" itens={genero}/>
+                <FieldText obligatory={true} label="Nome do personagem" placeholder="Digite o nome do personagem..."/>
+                <FieldText obligatory={true} label="Game" placeholder="Digite o nome do game..."/>
+                <FieldText obligatory={true} label="Imagem do personagem" placeholder="URL da imagem"/>
+                <Dropdown obligatory={true} label="Gênero" itens={genero}/>
+                <Button>
+                    Criar Card
+                </Button>
             </form>
         </section>
     )
