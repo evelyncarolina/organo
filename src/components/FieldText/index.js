@@ -1,9 +1,16 @@
 import './FieldText.css'
 const FieldText = (props) =>{
+
+    //const [valor, setValor] = useState('')
+
+    const toTyping = (evento) =>{
+        props.toChange(evento.target.value)
+    }
+
     return (
         <div className="text">
             <label>{props.label}</label>
-            <input required={props.obligatory} placeholder={props.placeholder}/>
+            <input value={props.valor} onChange={toTyping} required={props.obligatory} placeholder={props.placeholder}/>
         </div>
     )
 }
