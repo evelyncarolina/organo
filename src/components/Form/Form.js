@@ -4,7 +4,7 @@ import Dropdown from '../Dropdown/Dropdown';
 import FieldText from '../FieldText';
 import './Form.css'
 
-const Form = () => {
+const Form = (props) => {
 
     const genero = [
         'Aventura e Sobrevivência',
@@ -25,7 +25,12 @@ const Form = () => {
 
     const save = (evento) => {
         evento.preventDefault()
-        console.log("Form salvo", name, game, image)
+        props.aoPersonagemSalvo({
+            name,
+            game,
+            image,
+            genero
+        })
     }
 
     return(
