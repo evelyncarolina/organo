@@ -5,18 +5,6 @@ import FieldText from '../FieldText';
 import './Form.css'
 
 const Form = (props) => {
-
-    const genero = [
-        'Aventura e Sobrevivência',
-        'Ação',
-        'RPG',
-        'Battle Royale',
-        'Horror e Terror',
-        'Estratégia',
-        'Puzzle',
-        'Esporte',
-        'Corrida'
-    ]
  
     const [name, setName] = useState('')
     const [game, setGame] = useState('')
@@ -29,7 +17,7 @@ const Form = (props) => {
             name,
             game,
             image,
-            genero
+            generos
         })
     }
 
@@ -61,7 +49,7 @@ const Form = (props) => {
                 <Dropdown 
                     obligatory={true} 
                     label="Gênero" 
-                    itens={genero}
+                    itens={props.nameGeneros}
                     valor={generos}
                     toChange={valor => setGeneros(valor)} />
                     

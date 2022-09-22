@@ -63,7 +63,7 @@ function App() {
   return (
     <div className="App">
       <Banner/>
-      <Form aoPersonagemSalvo={personagem => aoNovoPersonagemAdicionado(personagem)}/>
+      <Form nameGeneros={generos.map(generos => generos.name)} aoPersonagemSalvo={personagem => aoNovoPersonagemAdicionado(personagem)}/>
       
       {generos.map(genero =><Gender key={genero.name} name={genero.name} primaryColor={genero.primaryColor} secondaryColor={genero.secondaryColor}/>)}
     </div>
