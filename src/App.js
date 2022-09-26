@@ -65,7 +65,13 @@ function App() {
       <Banner/>
       <Form nameGeneros={generos.map(generos => generos.name)} aoPersonagemSalvo={personagem => aoNovoPersonagemAdicionado(personagem)}/>
       
-      {generos.map(genero =><Gender key={genero.name} name={genero.name} primaryColor={genero.primaryColor} secondaryColor={genero.secondaryColor}/>)}
+      {generos.map(genero =><Gender 
+      key={genero.name} 
+      name={genero.name} 
+      primaryColor={genero.primaryColor} 
+      secondaryColor={genero.secondaryColor}
+      personagens={personagens.filter(personagem => personagem.generos === genero.name)}
+      />)}
     </div>
   );
 }

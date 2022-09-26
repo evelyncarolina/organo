@@ -1,14 +1,14 @@
 import './Card.css'
 
-const Card = () => {
+const Card = ({name, game, image}) => {
     return(
         <div className='card'>
             <div className='header'>
-                <img src='https://github.com/evelyncarolina.png' alt='Imagem do seu personagem'/>
+                <img src={image} alt={name}/>
             </div>
             <div className='footer'>
-                <h4>Nome do Personagem</h4>
-                <h5>Nome do Game</h5>
+                <h4>{name}</h4>
+                <h5>{game}</h5>
             </div>
         </div>  
     )
