@@ -19,6 +19,10 @@ const Form = (props) => {
             image,
             generos
         })
+        setName('')
+        setGame('')
+        setImage('')
+        setGeneros('')
     }
 
     return(

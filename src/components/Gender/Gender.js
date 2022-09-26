@@ -3,6 +3,7 @@ import './Gender.css'
 
 const Gender = (props) =>{
     return(
+        props.personagens.length > 0 &&
         <section className='gender' style={{backgroundColor: props.secondaryColor}}>
             <h3 style={{borderColor: props.primaryColor}} >{props.name}</h3>
             
